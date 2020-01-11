@@ -8,7 +8,7 @@ public class PhoneNumber implements Parcelable {
     private String typeLabel;
     private String number;
 
-    PhoneNumber(String typeLabel, String number) {
+    public PhoneNumber(String typeLabel, String number) {
         this.typeLabel = typeLabel;
         this.number = number;
     }
