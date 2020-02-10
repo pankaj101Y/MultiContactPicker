@@ -39,6 +39,7 @@ class MultiContactPickerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         this.contactItemListOriginal = contactItemList;
         this.listener = listener;
         Collections.sort(this.contactItemListOriginal);
+        Collections.sort(this.contactItemList);
     }
 
     @Override
