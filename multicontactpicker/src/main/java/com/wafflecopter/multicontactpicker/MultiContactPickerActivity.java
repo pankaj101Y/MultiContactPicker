@@ -219,12 +219,7 @@ public class MultiContactPickerActivity extends AppCompatActivity implements Mat
                         if(builder.selectedItems.contains(value.getId())){
                             adapter.setContactSelected(value.getId());
                         }
-                        Collections.sort(contactList, new Comparator<Contact>() {
-                            @Override
-                            public int compare(Contact contact, Contact t1) {
-                                return contact.getDisplayName().compareToIgnoreCase(t1.getDisplayName());
-                            }
-                        });
+                        Collections.sort(contactList);
                         if(builder.loadingMode == MultiContactPicker.LOAD_ASYNC) {
                             if (adapter != null) {
                                 adapter.notifyDataSetChanged();
