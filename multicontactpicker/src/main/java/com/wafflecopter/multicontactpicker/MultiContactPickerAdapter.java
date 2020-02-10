@@ -21,6 +21,7 @@ import com.wafflecopter.multicontactpicker.Views.RoundLetterView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 class MultiContactPickerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements FastScroller.SectionIndexer, Filterable {
 
