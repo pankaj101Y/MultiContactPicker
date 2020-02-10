@@ -103,10 +103,16 @@ public class Contact implements Comparable<Contact> {
 
     @Override
     public int compareTo(Contact other) {
+        int temp;
         if(mDisplayName != null && other.mDisplayName != null)
-            return mDisplayName.compareTo(other.mDisplayName);
-        else return -1;
+            temp= mDisplayName.compareTo(other.mDisplayName);
+        else temp= -1;
+        if(isSelected()&&other.isSelected())return temp;
+        if(isSelected())return -1;
+        if(other.isSelected())return 1;
+        return temp;
     }
+    
 
     @Override
     public int hashCode () {
